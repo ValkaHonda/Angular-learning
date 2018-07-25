@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Data } from '../data/data';
 
 
 @Component({
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./articleList.component.css']
 })
 export class ArtComponent {
- 
+  data:Data;
+  constructor(){
+    this.data = new Data();
+  }
 }

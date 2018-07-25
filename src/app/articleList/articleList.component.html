@@ -1,8 +1,5 @@
 <ul>
-    <li>honda</li>
-    <li>toyota</li>
-    <li>audy</li>
-    <li>vw</li>
-    <li>bmw</li>
-    <li>Lada</li>
+    <li *ngFor="let item of data.items; let myIndex = index">
+        {{item.title}}
+    </li> 
 </ul>

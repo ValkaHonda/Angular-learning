@@ -1,0 +1,15 @@
+#green-option{
+    background-color: rgb(25, 231, 6);
+}
+#red-option{
+    background-color: red;
+}
+#blue-option{
+    background-color: blue;
+}
+#black-option{
+    background-color: black;
+}
+option{
+    color: yellow;
+}
