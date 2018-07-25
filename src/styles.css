@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+
+custom-header{
     border-style: solid;
-    border-color: blue;
-    border-width: 1px;
+    border-color: red;
+}
+article-list{
+    border-color: green;
+    border-style: solid;
 }
