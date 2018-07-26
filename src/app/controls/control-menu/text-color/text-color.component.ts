@@ -14,7 +14,6 @@ export class TextColorComponent implements OnInit {
   }
 
   getColor($event){
-    // console.log($event.target.value); // this works!!!!
     this.chosenColor = $event.target.value;
     this.sendTextColor();
   }
