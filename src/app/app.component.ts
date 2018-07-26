@@ -1,5 +1,6 @@
 import { Component,NgIterable } from '@angular/core';
 import { Data } from './data/data';
+import { Article } from './data/Article';
 
 
 @Component({
@@ -8,8 +9,12 @@ import { Data } from './data/data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  data:Data;
+  articleContener:Data;
+  currentArticle:Article;
   constructor(){
-    this.data = new Data();
+    this.articleContener = new Data();
+  }
+  receiveArticle($event){
+    this.currentArticle = $event;
   }
 }

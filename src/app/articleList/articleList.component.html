@@ -1,5 +1,5 @@
-<ul>
-    <li *ngFor="let item of data.items; let myIndex = index">
-        {{item.title}}
-    </li> 
-</ul>
+<nav>    
+    <div *ngFor="let item of articleContener.items; let myIndex = index">
+        <button type="button" (click)="choseArticle(item)" class="btn col-sm-12">{{item.title}}</button>
+    </div> 
+</nav>

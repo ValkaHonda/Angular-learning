@@ -10,3 +10,12 @@
 #black-option{
     color: black;
 }
+label{
+    font-size: 25px;
+}
+select{
+    font-size: 25px; 
+}
+option{
+    font-size: 25px;
+}

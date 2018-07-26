@@ -1,3 +1,7 @@
-li{
-    font-size: 20px;
+button{
+    font-size: 30px;
+}
+button:hover{
+    background-color: green;
+    color: white;
 }

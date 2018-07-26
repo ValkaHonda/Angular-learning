@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { Data } from '../data/data';
+import { Article } from '../data/Article';
 
 
 @Component({
@@ -8,8 +9,14 @@ import { Data } from '../data/data';
   styleUrls: ['./articleList.component.css']
 })
 export class ArtComponent {
-  data:Data;
-  constructor(){
-    this.data = new Data();
+  @Input() articleContener:Data
+  @Output() articleEvent = new EventEmitter<Article>();
+  chosenArticle:Article
+  choseArticle(item){
+    this.chosenArticle=item;
+    this.sendArticle();
+  }
+  sendArticle(){
+    this.articleEvent.emit(this.chosenArticle);
   }
 }
