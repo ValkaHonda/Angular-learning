@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./control-menu.component.css']
 })
 export class ControlMenuComponent implements OnInit {
-
-  constructor() { }
+  textColor:String;
+  constructor() { 
+    this.textColor = "black";
+  }
 
   ngOnInit() {
+  }
+  receiveColorEvent($event){
+    if($event != null){
+      this.textColor = $event;
+      console.log($event);
+    }
   }
 
 }
