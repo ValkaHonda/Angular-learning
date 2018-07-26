@@ -9,12 +9,15 @@ import { Article } from './data/Article';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  show:boolean;
   articleContener:Data;
   currentArticle:Article;
   constructor(){
     this.articleContener = new Data();
+    this.show = false;
   }
   receiveArticle($event){
     this.currentArticle = $event;
+    this.show = true;
   }
 }
