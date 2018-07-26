@@ -1,8 +1,8 @@
-<p class="h1">
+<p [ngStyle]="{'color': fontColor, 'background-color': backgroundColor}" class="h1">
   {{description}}
 </p>
 <div>
-    <button type="button" class="btn btn-primary btn-lg">
+    <button [attr.disabled]="disableFlag ? true : null" (click)="readMore()" type="button" class="btn btn-primary btn-lg">
       Read more
     </button>
 </div>

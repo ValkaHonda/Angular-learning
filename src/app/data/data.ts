@@ -6,7 +6,13 @@ export class Data {
     items: Iterable<Article>;
     constructor(){
         this.items = [
-            new Article('Honda','It is car','Valka','https://cars.honda.bg/wp-content/uploads/sites/2/2015/04/civics.png'),
+            new Article('Honda',`Honda Motor Company, Ltd. (Japanese: 本田技研工業株式会社 Hepburn: Honda Giken Kōgyō KK, IPA: [honda] (About this sound listen); /ˈhɒndə/) is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, aircraft, motorcycles, and power equipment.
+
+            Honda has been the world's largest motorcycle manufacturer since 1959,[2][3] as well as the world's largest manufacturer of internal combustion engines measured by volume, producing more than 14 million internal combustion engines each year.[4] Honda became the second-largest Japanese automobile manufacturer in 2001.[5][6] Honda was the eighth largest automobile manufacturer in the world behind Toyota, Volkswagen Group, Hyundai Motor Group, General Motors, Ford, Nissan, and Fiat Chrysler Automobiles in 2015.[7]
+            
+            Honda was the first Japanese automobile manufacturer to release a dedicated luxury brand, Acura, in 1986. Aside from their core automobile and motorcycle businesses, Honda also manufactures garden equipment, marine engines, personal watercraft and power generators, and other products. Since 1986, Honda has been involved with artificial intelligence/robotics research and released their ASIMO robot in 2000. They have also ventured into aerospace with the establishment of GE Honda Aero Engines in 2004 and the Honda HA-420 HondaJet, which began production in 2012. Honda has three joint-ventures in China (Honda China, Dongfeng Honda, and Guangqi Honda).
+            
+            In 2013, Honda invested about 5.7% (US$6.8 billion) of its revenues in research and development.[8] Also in 2013, Honda became the first Japanese automaker to be a net exporter from the United States, exporting 108,705 Honda and Acura models, while importing only 88,357`,'Valka','https://cars.honda.bg/wp-content/uploads/sites/2/2015/04/civics.png'),
             new Article('VW','It is nicer car','Ivan','http://www.pngmart.com/files/1/Volkswagen-PNG-Picture.png'),
             new Article('Lada','This is car from Russia','Valka','https://cliki.cityliferpg.com/images/5/53/Red_Lada.png'),
             new Article('BMW','This is a car for diferent type of people','Phil','http://pngimg.com/uploads/bmw/bmw_PNG1710.png'),

@@ -1,12 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-app-control-menu{
-    border-color: yellow;
-    border-style: solid;
-}
-app-article{
-    border-color: purple;
-    border-style: solid;
-}
 body{
     background-image: url("https://images.pexels.com/photos/235994/pexels-photo-235994.jpeg?auto=compress&cs=tinysrgb&h=350");
 }
