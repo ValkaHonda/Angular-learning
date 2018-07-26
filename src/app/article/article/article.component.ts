@@ -8,6 +8,8 @@ import { Article } from '../../data/Article';
 })
 export class ArticleComponent implements OnInit {
   @Input() currentArticle:Article
+  @Input() textColor;
+  @Input() textBackgroundColor;
   title:String;
   constructor() { }
 

@@ -8,16 +8,20 @@ import { Article } from '../../data/Article';
 })
 export class TextComponent implements OnInit {
   @Input() currentArticle:Article;
+  @Input() textColor;
+  @Input() backgroundColor;
   description:String;
   truncateLimit:number;
   disableFlag:boolean;
-  backgroundColor:String;
-  fontColor:String;
+
+  
+
+  
   constructor() {
     this.disableFlag = false;
     this.truncateLimit = 250;
     this.backgroundColor = "green";
-    this.fontColor = "black";
+    this.textColor = "black";
    }
 
   ngOnInit() {

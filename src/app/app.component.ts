@@ -27,13 +27,11 @@ export class AppComponent {
   receivebackgroundColorEvent($event){
     if($event != null){
       this.textBackgroundColor = $event;
-      console.log(this.textBackgroundColor);
     }
   }
   receiveTextColorEvent($event){
     if($event != null){
       this.textColor = $event;
-      console.log(this.textColor);
     }
   }
 

@@ -3,5 +3,5 @@
     <custom-header class="col-sm-12"></custom-header>
     <article-list (articleEvent)="receiveArticle($event)" [articleContener]="articleContener" class="col-sm-2"></article-list>
     <app-control-menu (backgroundColorEvent)="receivebackgroundColorEvent($event)" (textColorEvent)="receiveTextColorEvent($event)" *ngIf="show" class="col-sm-10"></app-control-menu>
-    <app-article *ngIf="show" [currentArticle]="currentArticle" class="col-sm-10"></app-article>
+    <app-article *ngIf="show" [textColor]="textColor" [textBackgroundColor]="textBackgroundColor" [currentArticle]="currentArticle" class="col-sm-10"></app-article>
 </div>
