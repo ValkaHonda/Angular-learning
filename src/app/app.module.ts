@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; // current progres
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -28,7 +29,8 @@ import { TextComponent } from './article/text/text.component';
     TextComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule // current progres
   ],
   providers: [],
   bootstrap: [AppComponent]
