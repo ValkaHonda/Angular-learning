@@ -14,11 +14,13 @@ export class AppComponent {
   currentArticle:Article;
   textColor:String;
   textBackgroundColor:String;
+  textSize:number;
   constructor(){
     this.articleContener = new Data();
     this.show = false;
     this.textColor = "black";
     this.textBackgroundColor = "green";
+    this.textSize = 30;
   }
   receiveArticle($event){
     this.currentArticle = $event;
@@ -34,5 +36,9 @@ export class AppComponent {
       this.textColor = $event;
     }
   }
-
+  receiveSize($event){
+    if($event != null){
+      this.textSize = $event;
+    }
+  }
 }

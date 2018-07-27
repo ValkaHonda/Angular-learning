@@ -10,6 +10,9 @@ export class TextComponent implements OnInit {
   @Input() currentArticle:Article;
   @Input() textColor;
   @Input() backgroundColor;
+  @Input() textSizeValue;
+
+  textSize:String;
   description:String;
   truncateLimit:number;
   disableFlag:boolean;
@@ -22,6 +25,7 @@ export class TextComponent implements OnInit {
     this.truncateLimit = 250;
     this.backgroundColor = "green";
     this.textColor = "black";
+    this.changeTextSize(30, "px"); // Input data
    }
 
   ngOnInit() {
@@ -32,6 +36,9 @@ export class TextComponent implements OnInit {
       if(this.currentArticle.description.length > this.truncateLimit){
         this.description += '...';
       }   
+    }
+    if(this.textSizeValue != null){
+      this.changeTextSize(this.textSizeValue,"px");
     }
   }
   readMore(){
@@ -50,6 +57,9 @@ export class TextComponent implements OnInit {
   }
   disable(){
     return this.disableFlag;
+  }
+  changeTextSize(size:number, measure:String){
+    this.textSize = String(size) + measure;
   }
 
 }

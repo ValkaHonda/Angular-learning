@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output,} from '@angular/core';
+
 
 @Component({
   selector: 'app-text-size',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextSizeComponent implements OnInit {
 
-  constructor() { }
+  @Output() textSizeEvent = new EventEmitter<number>();
+  textSize:number;
+
+
+  constructor() {
+    this.textSize = 30;
+    this.sendTextSize();
+   }
 
   ngOnInit() {
   }
 
+  increaseTextSize(){
+    this.textSize++;
+    this.sendTextSize();
+  }
+  decreaseTextSize(){
+    this.textSize--;
+    this.sendTextSize();
+  }
+  sendTextSize(){
+    this.textSizeEvent.emit(this.textSize);
+  }
 }

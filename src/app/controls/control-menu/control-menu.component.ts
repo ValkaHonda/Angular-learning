@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ControlMenuComponent implements OnInit {
   @Output() textColorEvent = new EventEmitter<String>();
   @Output() backgroundColorEvent = new EventEmitter<String>();
+  @Output() textSizeEmiter = new EventEmitter<Number>();
 
   textColor:String;
   textBackgroundColor:String;
@@ -34,6 +35,11 @@ export class ControlMenuComponent implements OnInit {
     if($event != null){
       this.textBackgroundColor = $event;
       this.sendBackgroundColorEvent();
+    }
+  }
+  receiveSize($event){
+    if($event != null){
+      this.textSizeEmiter.emit($event);
     }
   }
 

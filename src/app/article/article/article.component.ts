@@ -10,6 +10,7 @@ export class ArticleComponent implements OnInit {
   @Input() currentArticle:Article
   @Input() textColor;
   @Input() textBackgroundColor;
+  @Input() textSize;
   title:String;
   constructor() { }
 
