@@ -13,7 +13,6 @@ export class ArticleService {
     this.articles = new Array();
     this.httpClient.get("http://localhost:8080/articles").subscribe(
       (data:any[]) => {
-        console.log(data[0]);
         for (let i = 0; i < data.length; i++) {
           data[i];
           let article:Article = new Article(

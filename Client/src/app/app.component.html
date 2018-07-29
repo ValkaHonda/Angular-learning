@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div> 
     <custom-header class="col-sm-12"></custom-header>
-    <article-list (articleEvent)="receiveArticle($event)" [articleContener]="articleContener" class="col-sm-2"></article-list>
-    <app-control-menu (backgroundColorEvent)="receivebackgroundColorEvent($event)" (textColorEvent)="receiveTextColorEvent($event)" (textSizeEmiter)="receiveSize($event)" *ngIf="show" class="col-sm-10"></app-control-menu>
-    <app-article *ngIf="show" [textSize]="textSize" [textColor]="textColor" [textBackgroundColor]="textBackgroundColor" [currentArticle]="currentArticle" class="col-sm-10"></app-article>
+    <article-list (articleEvent)="receiveArticle($event)" [articles]="articles" class="col-sm-3"></article-list>
+    <app-control-menu (backgroundColorEvent)="receivebackgroundColorEvent($event)" (textColorEvent)="receiveTextColorEvent($event)" (textSizeEmiter)="receiveSize($event)" *ngIf="show" class="col-sm-9"></app-control-menu>
+    <app-article *ngIf="show" [textSize]="textSize" [textColor]="textColor" [textBackgroundColor]="textBackgroundColor" [currentArticle]="currentArticle" class="col-sm-9"></app-article>
 </div>

@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
-import { Data } from '../data/data';
 import { Article } from '../data/Article';
-
 
 @Component({
   selector: 'article-list',
@@ -9,7 +7,7 @@ import { Article } from '../data/Article';
   styleUrls: ['./articleList.component.css']
 })
 export class ArtComponent {
-  @Input() articleContener:Data
+  @Input() articles:Array<Article>;
   @Output() articleEvent = new EventEmitter<Article>();
   chosenArticle:Article
   choseArticle(item){

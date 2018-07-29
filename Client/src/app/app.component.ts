@@ -13,18 +13,14 @@ import { ArticleService } from './services/article.service';
 })
 export class AppComponent {
   show:boolean;
-  articleContener:Data;
   articles:Array<Article>;
   currentArticle:Article;
   textColor:String;
   textBackgroundColor:String;
   textSize:number;
-  
-  number:any;
+ 
   constructor(private articleService:ArticleService){
-    this.articleContener = new Data();
     this.articles = this.articleService.getArticles();
-    this.articleContener.items = this.articles;
     this.show = false;
     this.textColor = "black";
     this.textBackgroundColor = "green";

@@ -1,5 +1,5 @@
 <nav>    
-    <div *ngFor="let item of articleContener.items; let myIndex = index">
+    <div *ngFor="let item of articles; let myIndex = index">
         <button type="button" (click)="choseArticle(item)" class="btn col-sm-12">{{item.title}}</button>
     </div> 
 </nav>

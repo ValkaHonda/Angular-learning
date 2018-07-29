@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Article } from '../../data/Article';
 
 @Component({
@@ -6,7 +6,7 @@ import { Article } from '../../data/Article';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class TextComponent implements OnInit {
+export class TextComponent implements OnInit, OnChanges {
   @Input() currentArticle:Article;
   @Input() textColor;
   @Input() backgroundColor;
@@ -16,10 +16,6 @@ export class TextComponent implements OnInit {
   description:String;
   truncateLimit:number;
   disableFlag:boolean;
-
-  
-
-  
   constructor() {
     this.disableFlag = false;
     this.truncateLimit = 250;
@@ -28,9 +24,13 @@ export class TextComponent implements OnInit {
     this.changeTextSize(30, "px"); // Input data
    }
 
-  ngOnInit() {
-  }
-  ngOnChanges(changes) {
+  ngOnInit() { }
+  ngOnChanges(changes: SimpleChanges) {
+
+    if(changes.currentArticle.isFirstChange){
+      this.disableFlag = false;
+      this.truncateLimit = 250;
+    }
     if(this.currentArticle != null){
       this.description = this.currentArticle.description.substring(0,this.truncateLimit);;
       if(this.currentArticle.description.length > this.truncateLimit){
@@ -50,14 +50,12 @@ export class TextComponent implements OnInit {
       this.disableFlag = true;
 
     } else{
-      this.truncateLimit+=250;
+      this.truncateLimit+=600;
       this.description =  this.currentArticle.description.substring(0,this.truncateLimit);
       this.description += '...';
     }
   }
-  disable(){
-    return this.disableFlag;
-  }
+
   changeTextSize(size:number, measure:String){
     this.textSize = String(size) + measure;
   }

@@ -10,6 +10,9 @@
 #black-option{
     color: black;
 }
+#white-option{
+    color: rgba(213, 213, 213, 0.905);
+}
 label{
     font-size: 25px;
 }
