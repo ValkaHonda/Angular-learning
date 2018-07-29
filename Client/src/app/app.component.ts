@@ -1,9 +1,8 @@
 import { Component,NgIterable, Injectable } from '@angular/core';
 import { Data } from './data/data';
 import { Article } from './data/Article';
-import { HttpClient } from '@angular/common/http';
-import { ArticleService } from './article/article-service/article.service';
-import { Services } from '../../node_modules/@angular/core/src/view';
+import { ArticleService } from './services/article.service';
+
 
 
 
@@ -15,22 +14,27 @@ import { Services } from '../../node_modules/@angular/core/src/view';
 export class AppComponent {
   show:boolean;
   articleContener:Data;
+  articles:Array<Article>;
   currentArticle:Article;
   textColor:String;
   textBackgroundColor:String;
   textSize:number;
-  articles:Array<any>;
-  constructor(private http: HttpClient){
+  
+  number:any;
+  constructor(private articleService:ArticleService){
     this.articleContener = new Data();
+    this.articles = this.articleService.getArticles();
+    this.articleContener.items = this.articles;
     this.show = false;
     this.textColor = "black";
     this.textBackgroundColor = "green";
     this.textSize = 30;
-    console.log(http.get("http://localhost:8080/articles").forEach(a=>console.log(a))); // so far so good
   }
+ 
   receiveArticle($event){
     this.currentArticle = $event;
     this.show = true;
+    
   }
   receivebackgroundColorEvent($event){
     if($event != null){

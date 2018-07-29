@@ -3,7 +3,7 @@ import { Article } from "./Article";
 
 export class Data {
 
-    items: Iterable<Article>;
+    items: Array<Article>; /// ops
     constructor(){
         this.items = [
             new Article('Honda',`Honda Motor Company, Ltd. (Japanese: 本田技研工業株式会社 Hepburn: Honda Giken Kōgyō KK, IPA: [honda] (About this sound listen); /ˈhɒndə/) is a Japanese public multinational conglomerate corporation primarily known as a manufacturer of automobiles, aircraft, motorcycles, and power equipment.
